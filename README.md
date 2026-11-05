@@ -27,3 +27,7 @@ SGIP/
 ├── mobile/
 ├── docs/
 └── .github/
+## Desarrollo coordinado
+
+Consulta la [guía de orquestación](docs/orquestacion-agentes.md) para trabajar
+con los requisitos de Notion, delegar tareas y verificar entregas antes de publicarlas.
