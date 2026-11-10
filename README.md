@@ -32,7 +32,7 @@ SGIP/
 ## Contexto y coordinación
 
 - [Guía de coordinación de agentes](docs/orquestacion-agentes.md).
-- [Modelo de datos: fuentes y contexto vigente](docs/contexto-modelo-datos.md), revisado09/11/2026.
+- [Modelo de datos: fuentes y contexto vigente](docs/contexto-modelo-datos.md), revisado 09/11/2026.
 - [Comparación con la implementación y plan de alineación por etapas](docs/alineacion-modelo-datos.md).
 - [Contrato RF-001 ratificado](docs/contrato-rf-001.md).
 
