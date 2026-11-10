@@ -63,6 +63,7 @@ def test_public_registration_normalizes_and_hashes():
     {"nombre": " "}, {"nombre": "a" * 121}, {"correo": "invalido"},
     {"contrasena": "corta"}, {"contrasena": "x" * 129}, {"nombre": 123},
     {"rol": "administrador"}, {"estado": "activo"}, {"id": "injected"},
+    {"nombre": "\x00Ana Maria"}, {"nombre": "Ana\x00Maria"}, {"nombre": "Ana Maria\x00"},
 ])
 def test_invalid_input_rejected_without_secrets(changes):
     repository = FakeRepository()

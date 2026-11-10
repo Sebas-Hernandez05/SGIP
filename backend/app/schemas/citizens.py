@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict, EmailStr, Field, field_validator
 
 class CitizenRegistration(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True, hide_input_in_errors=True)
-    nombre: str = Field(min_length=2, max_length=120)
+    nombre: str = Field(min_length=2, max_length=120, pattern=r"^[^\x00]*$")
     correo: EmailStr = Field(max_length=254)
     contrasena: str = Field(min_length=12, max_length=128, repr=False)
 
