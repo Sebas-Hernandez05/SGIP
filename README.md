@@ -37,3 +37,8 @@ SGIP/
 - [Contrato RF-001 ratificado](docs/contrato-rf-001.md).
 
 El modelo lógico de32 entidades y65 relaciones es una referencia documental; su actualización no significa que las migraciones o funcionalidades estén implementadas. El estado observado del código y las decisiones pendientes se detallan en los documentos anteriores.
+
+## Desarrollo coordinado
+
+Consulta la [guía de orquestación](docs/orquestacion-agentes.md) para trabajar
+con los requisitos de Notion, delegar tareas y verificar entregas antes de publicarlas.

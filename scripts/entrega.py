@@ -24,12 +24,19 @@ def entrega_preparada():
         raise ValueError("Prepara los archivos de la entrega antes de solicitar aceptación.")
     if git("diff", "--name-only") or git("ls-files", "--others", "--exclude-standard"):
         raise ValueError("Resuelve los cambios sin preparar y los archivos sin rastrear.")
-    for estado in ("MERGE_HEAD", "CHERRY_PICK_HEAD", "REVERT_HEAD", "rebase-merge", "rebase-apply"):
+    for estado in ("CHERRY_PICK_HEAD", "REVERT_HEAD", "rebase-merge", "rebase-apply"):
         if Path(git("rev-parse", "--git-path", estado)).exists():
             raise ValueError("Completa la operación de Git en curso.")
+    merge_head = Path(git("rev-parse", "--git-path", "MERGE_HEAD"))
+    padres = [base]
+    if merge_head.exists():
+        padres.extend(merge_head.read_text(encoding="utf-8").splitlines())
     arbol = git("write-tree")
-    huella = hashlib.sha256(json.dumps([rama, base, arbol]).encode()).hexdigest()
-    return base, arbol, huella
+    datos = [rama, base, arbol]
+    if len(padres) > 1:
+        datos.append(padres[1:])
+    huella = hashlib.sha256(json.dumps(datos).encode()).hexdigest()
+    return padres, arbol, huella
 
 
 def main():
@@ -42,7 +49,7 @@ def main():
     commit.add_argument("mensaje")
     args = parser.parse_args()
 
-    base, arbol, huella = entrega_preparada()
+    padres, arbol, huella = entrega_preparada()
     if args.accion == "preparar":
         print(huella)
         return
@@ -58,7 +65,7 @@ def main():
         f"Entrega-Aceptada: {huella}\nAprobacion: {args.referencia}",
     )
     sha = git("rev-parse", "HEAD")
-    if git("show", "-s", "--format=%P %T", sha) != f"{base} {arbol}":
+    if git("show", "-s", "--format=%P %T", sha) != f"{' '.join(padres)} {arbol}":
         raise ValueError(f"El commit local {sha} difiere de la entrega aceptada. Detén la publicación.")
     print(sha)
 

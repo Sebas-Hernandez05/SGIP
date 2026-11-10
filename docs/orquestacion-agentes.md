@@ -35,6 +35,9 @@ Con Codex CLI, desde el repositorio de confianza, ejecuta `codex mcp login notio
 
 La aprobación se da sobre la huella que imprime `python3 scripts/entrega.py preparar`. El script comprueba la rama, el SHA base y el contenido del índice. El coordinador obtiene del revisor la huella y la referencia de aprobación, ejecuta el commit y verifica la publicación del SHA en GitHub. Las instrucciones reservan el commit y el push al coordinador. Los permisos efectivos se administran en el entorno y GitHub.
 
+Para integrar una rama con `git merge --no-commit --no-ff`, resuelve los conflictos y prepara todos los archivos antes de generar la huella. El script incluye los padres de integración en la huella y comprueba su orden y el árbol al crear el commit. Un cambio en cualquiera de los padres requiere una nueva aceptación. Los conflictos sin resolver y las operaciones de cherry-pick, revert o rebase en curso bloquean la preparación.
+
+
 ## Contexto de datos vigente y reglas del coordinador
 
 Actualización documental09/11/2026: esta guía conserva la estructura de la guía del repositorio principal y se incorpora al worktree para quedar versionada con el contexto. Las instrucciones ancestras de aceptación/commit siguen vigentes.
