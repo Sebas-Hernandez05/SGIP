@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-09",
+  "html_sha256": "4f3ac1a90a12fbcb9b0a96bfb6e12140cc6bab63c4d72ae45d62251edb1acf35",
+  "entities": 32,
+  "foreign_key_attributes": 65,
+  "relations": 65,
+  "unique_entities_and_relation_labels": true,
+  "all_relation_endpoints_exist": true,
+  "fk_and_relation_target_counts_match_per_entity": true,
+  "one_primary_key_per_entity": true,
+  "all_attribute_notes_read": true,
+  "notes_objects": 25,
+  "context_inventory_matches_32_entities": true,
+  "protected_existing_files": 125,
+  "protected_files_changed": [],
+  "git_index_unchanged": true,
+  "functional_or_database_tests_run": false,
+  "local_document_links_checked": 31,
+  "missing_local_link_targets": []
+}

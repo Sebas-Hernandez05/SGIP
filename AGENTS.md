@@ -17,3 +17,11 @@ Cuando el usuario active este flujo, el agente raíz coordina a los especialista
 - Web y móvil consumen la misma API central. El acceso a PostgreSQL, Supabase Storage y el proveedor de IA se concentra en el backend.
 - Asigna contratos HTTP y de datos antes de delegar clientes o persistencia en paralelo. En los cambios de backend separa el controlador HTTP del repositorio de persistencia y conserva las reglas de negocio en la capa de servicio cuando aplique.
 - Usa datos ficticios o anonimizados. Una sugerencia de IA solo se aplica tras la revisión de un funcionario autorizado. Distingue esta aprobación funcional de la aprobación del código.
+
+## Contexto del modelo y contrato RF-001
+
+Antes de planificar cambios de datos, consulta [el contexto del modelo](docs/contexto-modelo-datos.md) y [el plan de alineación](docs/alineacion-modelo-datos.md).
+
+Fuente lógica vigente: [Notion, sección5.3](https://app.notion.com/p/3de14e04c5cb809e9250e58428b4e44a), revisión09/11/2026; [adjunto corregido](ref/SGIP_Diagrama_ER_Corregido.html),32 entidades/65 relaciones. El adjunto Interactivo anterior es histórico. Distingue correcciones documentadas, propuestas pendientes e implementación probada; una actualización de Notion no ejecuta migraciones.
+
+RF-001 conserva el [contrato ratificado](docs/contrato-rf-001.md): nombre completo/correo/contraseña, sin documento/teléfono, POST `/api/v1/ciudadanos`, sin sesión automática. Cualquier ampliación requiere otra tarea. Conserva código, cambios locales y evidencia; la ampliación funcional se acuerda por tarea.
