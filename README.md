@@ -36,7 +36,7 @@ SGIP/
 - [Comparación con la implementación y plan de alineación por etapas](docs/alineacion-modelo-datos.md).
 - [Contrato RF-001 ratificado](docs/contrato-rf-001.md).
 
-El modelo lógico de32 entidades y65 relaciones es una referencia documental; su actualización no significa que las migraciones o funcionalidades estén implementadas. El estado observado del código y las decisiones pendientes se detallan en los documentos anteriores.
+El modelo lógico de 32 entidades y 65 relaciones es una referencia documental; su actualización no significa que las migraciones o funcionalidades estén implementadas. El estado observado del código y las decisiones pendientes se detallan en los documentos anteriores.
 
 ## Desarrollo coordinado
 
