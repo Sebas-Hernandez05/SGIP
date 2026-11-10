@@ -40,7 +40,7 @@ Para integrar una rama con `git merge --no-commit --no-ff`, resuelve los conflic
 
 ## Contexto de datos vigente y reglas del coordinador
 
-Actualización documental09/11/2026: esta guía conserva la estructura de la guía del repositorio principal y se incorpora al worktree para quedar versionada con el contexto. Las instrucciones ancestras de aceptación/commit siguen vigentes.
+Actualización documental 09/11/2026: esta guía conserva la estructura de la guía del repositorio principal y se incorpora al worktree para quedar versionada con el contexto. Las instrucciones ancestras de aceptación/commit siguen vigentes.
 
 1. Lee [contexto del modelo](contexto-modelo-datos.md), [comparación y etapas](alineacion-modelo-datos.md), Notion5.3 revisado09/11/2026 y el adjunto SGIP_Diagrama_ER_Corregido.html. Mantén el Interactivo anterior como histórico; no mezcles sus restricciones incompatibles. Registra URL/fecha/adjunto y conserva referencias estables, nunca URLs firmadas o credenciales.
 2. Clasifica cada afirmación: requisito con fuente, corrección lógica documentada, propuesta técnica/decisión pendiente, implementación encontrada y evidencia aplicable. Una edición de Notion no acredita migración ejecutada ni habilita todo lo representado en el modelo.
