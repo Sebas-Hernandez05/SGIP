@@ -1,0 +1,18 @@
+test_422_and_503_are_json_without_echoing_payload (__main__.QaResponsesTests.test_422_and_503_are_json_without_echoing_payload) ... POST recibido; simulacion=422; demora=0s; sin persistencia
+POST recibido; simulacion=503; demora=0s; sin persistencia
+ok
+test_cli_port_58010 (__main__.QaResponsesTests.test_cli_port_58010) ... ok
+test_cors_preflight_and_unknown_route (__main__.QaResponsesTests.test_cors_preflight_and_unknown_route) ... ok
+test_invalid_delay_is_rejected (__main__.QaResponsesTests.test_invalid_delay_is_rejected) ... ok
+test_mobile_service_real_fetch_422_503_and_15_second_timeout (__main__.QaResponsesTests.test_mobile_service_real_fetch_422_503_and_15_second_timeout) ... POST recibido; simulacion=422; demora=0s; sin persistencia
+Servicio móvil HTTP real status=422 delay=0: OK; 0.108s
+POST recibido; simulacion=503; demora=0s; sin persistencia
+Servicio móvil HTTP real status=503 delay=0: OK; 0.073s
+POST recibido; simulacion=503; demora=20s; sin persistencia
+Servicio móvil HTTP real status=503 delay=20: OK; 15.010s
+ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 20.021s
+
+OK

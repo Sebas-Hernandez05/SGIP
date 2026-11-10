@@ -1,0 +1,16 @@
+(node:33308) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/judat/SGIP/.worktrees/rf-001/mobile/src/services/registration.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\judat\SGIP\.worktrees\rf-001\mobile\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ registro consume solo API central y no envía confirmación ni rol (5.7373ms)
+✔ duplicado, validación y servicio fallido tienen mensajes controlados (1.023ms)
+✔ fallo de red permite reintentar sin exponer respuesta del servidor (0.5968ms)
+✔ rechaza configuración insegura antes de enviar credenciales (0.4751ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 568.7201

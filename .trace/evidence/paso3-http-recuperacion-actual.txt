@@ -1,0 +1,3 @@
+HTTP real API/PostgreSQL: 201/409/422 y preflight CORS aprobados; registro=0.1913s; concurrencia=1
+Backup/restauración lógica: pg_dump + pg_restore exit 0; cuenta, hash y auditoría iguales en segunda BD temporal
+Limpieza: API temporal detenida, migración revertida y BD de restauración retirada
